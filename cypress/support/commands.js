@@ -47,4 +47,18 @@ Cypress.Commands.add('addProduto', (produto, tamanho, cor, quantidade) => {
             .type(quantidade)
         cy.get('.single_add_to_cart_button')
             .click()
+});
+
+Cypress.Commands.add('loginCheckout', (usuario, senha) => {
+    cy.get('.dropdown-toggle > .text-skin > .icon-basket').click()
+        cy.get('#cart > .dropdown-menu > .widget_shopping_cart_content > .mini_cart_content > .mini_cart_inner > .mcart-border > .buttons > .checkout').click()
+        cy.get('.showlogin').click()
+        cy.get('#username').type(usuario)
+        cy.get('#password').type(senha)
+        cy.get('.woocommerce-button').click()
+});
+
+Cypress.Commands.add('checkout' , () => {
+    cy.get('#terms').check()
+    cy.get('#place_order').click({ force: true })
 })
