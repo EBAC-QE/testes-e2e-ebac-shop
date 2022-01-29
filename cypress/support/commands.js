@@ -32,6 +32,8 @@ Cypress.Commands.add('login', (usuario, senha) => {
 });
 
 Cypress.Commands.add('addProdutos', (produtos, tamanho, cor, quantidade) => {
+    cy.get('[class="#primary-menu > .active > a"]')
+    
     cy.get('[class="product-block grid"]')
         .contains(produtos).click()
     cy.get('.button-variable-item-' + tamanho).click()
