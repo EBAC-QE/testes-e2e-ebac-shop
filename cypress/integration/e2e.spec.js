@@ -18,25 +18,18 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
 
   
-    it.only('Login usando arquivo fixture', () => {
+    it('Login usando arquivo fixture', () => {
         cy.fixture('perfil').then((dados) => {
             cy.login(dados.usuario, dados.senha)
         })
         cy.get('.page-title').should('contain', 'Minha conta')
         cy.get('#primary-menu > .menu-item-629 > a').click()
 
-        cy.addProdutos('Abominable Hoodie', 'XS', 'Blue', 3)
-        
+        cy.addProdutos('Abominable Hoodie', 'L', 'Green', 1)
+       cy.addProdutos('Aero Daily Fitness Tee', 'XL', 'Black', 1)
+        cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
+       
 
     });
-
-
-
-    it('Deve adicionar produtos ao carrinho - Usando o comando customizado', () => {
-        cy.addProdutos('Abominable Hoodie', 'XS', 'Blue', 3)
-        cy.addProdutos('Aether Gym Pant', '36', 'Blue', 3)
-        cy.addProdutos('Ajax Full-Zip Sweatshirt', 'XS', 'Green', 4)
-        cy.addProdutos('Ajax Full-Zip Sweatshirt',)
-    })
 
 });
