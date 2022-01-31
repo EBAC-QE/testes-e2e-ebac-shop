@@ -40,10 +40,8 @@ Cypress.Commands.add('addProdutos', (produtos, tamanho, cor, quantidade,) => {
     cy.get('.input-text').clear().type(quantidade)
     cy.get('.single_add_to_cart_button').click()
     cy.get('.woocommerce-message').should('contain', 'foi adicionado no seu carrinho.')
-   cy.get('#primary-menu > .menu-item-629 > a').click({force: true})
-   
-  // cy.get('[class="product-block grid"]')
-      //  .contains(produtos).click()
-        
- 
+    cy.get('#primary-menu > .menu-item-629 > a').click({ force: true })
+
+
+
 });
