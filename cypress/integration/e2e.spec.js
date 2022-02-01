@@ -24,21 +24,17 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         })
         cy.get('.page-title').should('contain', 'Minha conta')
         cy.get('#primary-menu > .menu-item-629 > a').click()
-
         cy.addProdutos('Aether Gym Pant', '36', 'Blue', 1)
         cy.addProdutos('Abominable Hoodie', 'L', 'Blue', 1)
         cy.addProdutos('Apollo Running Short', '34', 'Black', 1)
         cy.addProdutos('Ajax Full-Zip Sweatshirt', 'M', 'Blue', 1)
         cy.get('.dropdown-toggle > .text-skin > .icon-basket').click()
-        cy.get('#checkout').click({force: true})
-        // cy.get('#cart').click({force: true})    
-        // cy.get('#cart > .dropdown-menu > .widget_shopping_cart_content > .mini_cart_content > .mini_cart_inner > .mcart-border > .buttons > .checkout').click()
-        //cy.get('.woocommerce-billing-fields > h3').should('contain', 'Detalhes de faturamento')
-        // cy.get('#payment_method_cod').click()
+        cy.get('[class="button checkout wc-forward"]').eq(1).click()
         cy.get('#payment_method_cheque').click()
         cy.get('#terms').click({ force: true })
         cy.get('#place_order').click({ force: true })
         cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
+        cy.get('.woocommerce-order-details__title').should('contain', 'Detalhes do pedido')
 
     });
 
