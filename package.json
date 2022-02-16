@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
-    "start": "npx serverest",
+    "start": "npx serverest --porta 3500",
     "cy:dashboard": "",
     "cy:report": ""
   },
