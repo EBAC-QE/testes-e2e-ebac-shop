@@ -1,3 +1,4 @@
 {
-  "baseUrl": "http://lojaebac.ebaconline.art.br/"
+  "baseUrl": "http://lojaebac.ebaconline.art.br/",
+  "reporter": "mochawesome"
 }
