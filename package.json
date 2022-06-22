@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "cy:report": "--reporter mochawesome --reporter-options reportDir=\"cypress/results\"",
+    "cy:mergeReport": "npx mochawesome-merge \"cypress/results/*.json\" > index.json && npx marge index.json",
     "cy:dashboard": "",
     "cy:report": ""
   },
@@ -26,6 +28,9 @@
   },
   "dependencies": {
     "faker": "^5.5.3",
-    "mochawesome": "^7.1.3"
+    "mocha": "^10.0.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
