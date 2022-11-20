@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
+    "cy:run-junit": "npx cypress run --reporter junit",
     "cy:run": "npx cypress run",
     "cy:dashboard": "",
     "cy:report": ""
