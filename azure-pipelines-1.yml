@@ -1,0 +1,23 @@
+trigger:
+- ci
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  displayName: "Setup"
+  inputs:
+    versionSource: 'spec'
+    versionSpec: '12.x'
+- script: 'npm install'
+  displayName: "Instala depências"
+
+- script: "npm run cy: run-junit" 
+  displayName: "Executa os testes"
+- task: PublishTestResults@2
+  displayName: "Gera Relatório"
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/*.xml'
+    testRunTitle: 'Testes EBAC'
