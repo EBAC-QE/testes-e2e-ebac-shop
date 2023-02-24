@@ -18,11 +18,10 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": ""
   },
   "homepage": "",
   "devDependencies": {
-    "cypress": "^9.7.0"
+    "cypress": "^12.6.0"
   },
   "dependencies": {
     "faker": "^5.5.3"
