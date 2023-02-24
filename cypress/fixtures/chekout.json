@@ -1,4 +1,13 @@
 {
-    "usuario": "aluno_ebac@teste.com",
-    "senha": "teste@teste.com"
+
+  "nome":"Lucas",
+  "sobrenome":"Oliveira",
+  "pais":"Brasil",
+  "endereco":"Av Mauá 170",
+  "cidade":"Florianópolis",
+  "estado":"Santa Catarina",
+  "cep":"56788000",
+  "telefone":"53 991645789",
+  "email":"teste@trinta.com"
+  
   }

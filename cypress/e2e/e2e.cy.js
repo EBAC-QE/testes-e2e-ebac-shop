@@ -1,5 +1,7 @@
-/// <reference types="cypress"/>
+///  <reference types="cypress" />
+
 const chekout = require('../fixtures/chekout.json')
+
 context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
     /*  Como cliente 
         Quero acessar a Loja EBAC 
