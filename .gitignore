@@ -105,4 +105,4 @@ dist
 
 videos/
 screenshots/
-
+*.xml
