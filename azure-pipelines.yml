@@ -17,4 +17,5 @@ steps:
   displayName: "Gera o Relatório"
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/-*.xml'
+    testResultsFiles: '**/*.xml'
+
