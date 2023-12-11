@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonando repositorio') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Lucas-Nnunes/Exercicio.git'
+            }
+        }
+        
+        stage('Instalando dependencias') {
+            steps {
+                powershell 'npm install'
+            }
+        }
+        
+        stage('Executar teste') {
+            steps {
+                powershell 'npm run cy:run '
+            }
+        }
+    }
+    
+}
