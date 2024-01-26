@@ -79,5 +79,5 @@ Cypress.Commands.add('finalizarcompra', (primeironome, ultimonome, endereco, cid
     cy.get('#createaccount').click()
     cy.get('#account_password').type('Teste@teste123!')
     cy.get('#terms').click()
-    cy.get('#place_order').click()
+    cy.get('#place_order').click({force:true})
 });
