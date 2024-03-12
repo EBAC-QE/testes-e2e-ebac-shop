@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps{
-                sh 'set NO_COLOR=1 && npm run cy:run || exit 0'
+                sh 'cmd /c set NO_COLOR=1 && npm run cy:run'
             }
         }
         stage('Deploy') {
