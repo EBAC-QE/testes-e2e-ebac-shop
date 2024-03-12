@@ -26,6 +26,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()
         cy.finalizarcompra(nomeFaker, sobrenomeFaker, 'Rua X', 'Rio de Janeiro', 'Rio de Janeiro', '22776-000', '2199999999', emailFaker)
+        cy.wait(2000)
         cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.')
     });
 })
