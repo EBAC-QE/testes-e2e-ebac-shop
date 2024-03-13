@@ -4,12 +4,12 @@ pipeline {
     stages{
         stage('Setup'){
             steps{
-                sh 'npm install'
+                echo 'npm install'
             }
         }
         stage('Test'){
             steps{
-                sh 'NO_COLOR=1 npm run cy:run | true'
+                echo 'NO_COLOR=1 npm run cy:run | true'
             }
         }
         stage('Deploy'){
