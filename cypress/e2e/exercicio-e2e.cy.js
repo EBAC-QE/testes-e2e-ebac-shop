@@ -22,7 +22,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.pedidos1('Aero Daily Fitness Tee', 'M', 'Brown', 1)
         cy.pedidos2('Arcadio Gym Short', '34', 'Blue', 3)
         cy.pedidos3('Argus All-Weather Tank', 'S', 'Gray', 2)
-        cy.pedidos4('Aether Gym Pant', '34', 'Brown', 5)
+        cy.pedidos4('Aether Gym Pant', '34', 'Green', 4)
         cy.get('.woocommerce-message > .button').click()
         cy.get('.checkout-button').click()
         cy.finalizarcompra(nomeFaker, sobrenomeFaker, 'Rua X', 'Rio de Janeiro', 'Rio de Janeiro', '22776-000', '2199999999', emailFaker)

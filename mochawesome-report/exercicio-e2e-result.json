@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-03-13T18:21:00.894Z",
+    "end": "2024-03-13T18:21:22.157Z",
+    "duration": 21263,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "892f0770-7e6d-4ab4-bd03-adad8c373008",
+      "title": "",
+      "fullFile": "cypress\\e2e\\exercicio-e2e.cy.js",
+      "file": "cypress\\e2e\\exercicio-e2e.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6af1781c-82ff-4c85-b623-c1a68dd74b7d",
+          "title": "Exercicio - Testes End-to-end - Fluxo de pedido",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Deve fazer um pedido na loja Ebac Shop de ponta a ponta",
+              "fullTitle": "Exercicio - Testes End-to-end - Fluxo de pedido Deve fazer um pedido na loja Ebac Shop de ponta a ponta",
+              "timedOut": null,
+              "duration": 21202,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let nomeFaker = faker.name.firstName();\nlet sobrenomeFaker = faker.name.lastName();\nlet emailFaker = faker.internet.email(nomeFaker);\ncy.pedidos1('Aero Daily Fitness Tee', 'M', 'Brown', 1);\ncy.pedidos2('Arcadio Gym Short', '34', 'Blue', 3);\ncy.pedidos3('Argus All-Weather Tank', 'S', 'Gray', 2);\ncy.pedidos4('Aether Gym Pant', '34', 'Green', 4);\ncy.get('.woocommerce-message > .button').click();\ncy.get('.checkout-button').click();\ncy.finalizarcompra(nomeFaker, sobrenomeFaker, 'Rua X', 'Rio de Janeiro', 'Rio de Janeiro', '22776-000', '2199999999', emailFaker);\ncy.wait(2000);\ncy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.woocommerce-message > .button`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.woocommerce-message > .button`, but never found it.\n    at Context.eval (webpack://teste-ebac-ui/./cypress/e2e/exercicio-e2e.cy.js:26:11)",
+                "diff": null
+              },
+              "uuid": "55326960-8c3c-4af6-87df-edb6bfc98908",
+              "parentUUID": "6af1781c-82ff-4c85-b623-c1a68dd74b7d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "55326960-8c3c-4af6-87df-edb6bfc98908"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 21202,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[name]-result",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportFilename": "[name]-result",
+        "html": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
