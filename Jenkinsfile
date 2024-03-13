@@ -4,6 +4,7 @@ pipeline {
     stages{
         stage('Setup'){
             steps{
+                cd .\testes-e2e-ebac-shop\
                 sh 'npm install'
             }
         }
