@@ -7,6 +7,7 @@
     "test": "npm run cy:run",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "cy:run-junit": "npx cypress run --reporter junit",
     "cy:report": "npx mochawesome-merge .\\mochawesome-report\\mochawesome*.json > mochawesome-report\\report.json && npx marge mochawesome-report\\report.json"
   },
   "repository": {

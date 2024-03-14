@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 let dadosLogin
 
-Context('Funcionalidade Login', () => {
+describe('Funcionalidade Login', () => {
     before(() => {
         cy.fixture('perfil').then(perfil => {
             dadosLogin = perfil
