@@ -1,0 +1,25 @@
+trigger:
+- ci
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+displayname: "Setup"
+  inputs:
+    versionSource: 'spec'
+    versionSpec: '12.x'
+    force32bit: true
+
+- script: 'npm install'
+displayname: "Instalar dependencias"
+
+- script: "npm run cypress:run-junit"
+displayname: "Executar testes"
+
+- task: PublishTestResults@2
+displayname: "Gera relatório"
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/-*.xml'
