@@ -1,12 +1,13 @@
 {
   "name": "teste-ebac-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ebac shop: http://lojaebac.ebaconline.art.br/",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "cy:run-junit": "npx cypress run --reporter junit",
     "cy:dashboard": "",
     "cy:report": ""
   },
@@ -17,12 +18,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": ""
-  },
   "homepage": "",
   "devDependencies": {
-    "cypress": "^9.7.0"
+    "cypress": "^9.7.0",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
     "faker": "^5.5.3"

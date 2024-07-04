@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.0000" tests="3" failures="1">
+  <testsuite name="Root Suite" timestamp="2024-07-04T22:00:14" tests="0" file="cypress/integration/login.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Funcionalidade Login" timestamp="2024-07-04T22:00:14" tests="3" time="0.0000" failures="1">
+    <testcase name="Funcionalidade Login &quot;before each&quot; hook for &quot;Login com sucesso usando Comando customizado&quot;" time="0.0000" classname="&quot;before each&quot; hook for &quot;Login com sucesso usando Comando customizado&quot;">
+      <failure message="`cy.visit()` failed trying to load:
+
+http://lojaebac.ebaconline.art.br/minha-conta
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  &gt; Error: ESOCKETTIMEDOUT
+
+Common situations why this would fail:
+  - you don&apos;t have internet access
+  - you forgot to run / boot your web server
+  - your web server isn&apos;t accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Funcionalidade Login`" type="CypressError"><![CDATA[CypressError: `cy.visit()` failed trying to load:
+
+http://lojaebac.ebaconline.art.br/minha-conta
+
+We attempted to make an http request to this URL but the request failed without a response.
+
+We received this error at the network level:
+
+  > Error: ESOCKETTIMEDOUT
+
+Common situations why this would fail:
+  - you don't have internet access
+  - you forgot to run / boot your web server
+  - your web server isn't accessible
+  - you have weird network configuration settings on your computer
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Funcionalidade Login`
+    at http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:163608:82
+    at visitFailedByErr (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:162912:12)
+    at http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:163607:11
+    at tryCatcher (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:13022:23)
+    at Promise._settlePromiseFromHandler (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:10957:31)
+    at Promise._settlePromise (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:11014:18)
+    at Promise._settlePromise0 (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:11059:10)
+    at Promise._settlePromises (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:11135:18)
+    at _drainQueueStep (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:7729:12)
+    at _drainQueue (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:7722:9)
+    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:7738:5)
+    at Async.drainQueues (http://lojaebac.ebaconline.art.br/__cypress/runner/cypress_runner.js:7608:14)
+From Your Spec Code:
+    at Context.eval (http://lojaebac.ebaconline.art.br/__cypress/tests?p=cypress\integration\login.spec.js:108:8)
+
+From Node.js Internals:
+  Error: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\itna.santana\AppData\Local\Cypress\Cache\9.7.0\Cypress\resources\app\node_modules\@cypress\request\request.js:808:19)
+      at Object.onceWrapper (node:events:509:28)
+      at ClientRequest.emit (node:events:390:28)
+      at Socket.emitRequestTimeout (node:_http_client:763:9)
+      at Object.onceWrapper (node:events:509:28)
+      at Socket.emit (node:events:402:35)
+      at Socket._onTimeout (node:net:501:8)
+      at listOnTimeout (node:internal/timers:557:17)
+      at processTimers (node:internal/timers:500:7)
+  ]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
