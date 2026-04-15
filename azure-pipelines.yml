@@ -5,18 +5,17 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  displayName: "Setup"
+- task: NodeTaskRunnerInstaller@0
+  displayName: 'Setup'
   inputs:
-    versionSpec: '12.x'
+    nodeVersion: '6'
 - script: 'npm install'
-  displayName: "Instala dependências"
-
-- script: "npm run cy:run-junit"
-  displayName: "Executa os testes"
-  
+  displayName: 'Instala dependencias'
+- script: 'npm run cy:run-junit'
+  displayName: 'executa os testes'
 - task: PublishTestResults@2
-  displayName: "Gera o Relatório"
+  displayName: 'Gera relatorio'
   inputs:
     testResultsFormat: 'JUnit'
     testResultsFiles: '**/*.xml'
+
