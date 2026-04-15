@@ -1,0 +1,21 @@
+trigger:
+- ci
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTaskRunnerInstaller@0
+  displayName: 'Setup'
+  inputs:
+    nodeVersion: '6'
+- script: 'npm install'
+  displayName: 'Instala dependencias'
+- script: 'npm run cy:run-junit'
+  displayName: 'executa os testes'
+- task: PublishTestResults@2
+  displayName: 'Gera relatorio'
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/*.xml'
+
