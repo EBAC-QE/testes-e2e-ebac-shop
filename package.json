@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "cy:run-junit": "npx cypress run --reporter junit",
     "cy:dashboard": "",
     "cy:report": ""
   },
@@ -27,5 +28,6 @@
   "dependencies": {
     "faker": "^5.5.3",
     "mochawesome": "^7.1.4"
+    "mochawesome": "^7.0.1"
   }
 }
